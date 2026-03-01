@@ -1,0 +1,34 @@
+.navbar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    margin: auto; 
+   height: 71px;
+
+}
+
+
+ .logo{
+   font-size: 2.5rem;
+   font-weight: 700;
+ }
+
+
+ .nav-menu{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   font-weight: 500;
+   font-size: 1.2rem;
+ }
+
+ 
+ .nav-menu a{ 
+  transition: .3s ease;
+ }
+ .nav-menu a:hover{  
+   opacity: .4;
+ }
+
