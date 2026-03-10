@@ -5,6 +5,10 @@
      font-family:sans-serif;
 }
 
+body{
+     overflow-x: hidden;
+}
+
 a{
      text-decoration: none;
      text-transform: capitalize;
@@ -17,8 +21,13 @@ li{
 
 
 
+header{  
+      border:none; 
+     
+}
 
 header .container{ 
       max-width: 1800px;
-      margin: auto;
+      margin: auto;  
+
 }

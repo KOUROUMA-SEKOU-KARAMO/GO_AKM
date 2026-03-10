@@ -4,14 +4,18 @@
     justify-content: space-between; 
     width: 100%;
     margin: auto; 
-   height: 71px;
-
+    height: 71px;
+    padding-inline:1.5em;  
+    position: relative; 
+    @media screen and (max-width:480px) {
+       padding-inline:1em;  
+   }
 }
 
-
  .logo{
-   font-size: 2.5rem;
+   font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
    font-weight: 700;
+
  }
 
 
@@ -21,8 +25,37 @@
    justify-content: center;
    gap: 15px;
    font-weight: 500;
-   font-size: 1.2rem;
+   font-size: 1.2rem; 
+   border:none;
+     @media screen and (max-width: 768px) {  
+      display: none; 
+   }
+ } 
+
+
+ header .container{
+    position: relative;   
+    
  }
+ .nav-menu-mobile {
+      display: none;
+      transition: 1s ease;
+     @media screen and (max-width: 768px) {
+      font-size: 1.5rem; 
+      flex-direction: column;
+      display: none; 
+      justify-content: flex-start;
+      padding-top:0;
+      background-color: white;
+      width: 100%;
+      border-top: none; 
+      overflow: hidden;
+      padding-bottom: 30px;
+      transition: 1s ease;
+  
+   }
+}
+
 
  
  .nav-menu a{ 

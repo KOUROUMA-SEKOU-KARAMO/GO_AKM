@@ -1,11 +1,10 @@
 .card-photo{
-    // flex: 1 350px;
     height: auto;  
-     border-radius:3px;
+    border-radius:3px;
     overflow:hidden;
     position: relative;  
     break-inside: avoid; 
-    margin-bottom: 1.125em;
+    margin-bottom:  0.625em;
 }
 
  
@@ -44,6 +43,9 @@
      padding: 10px;
      background:linear-gradient(rgba(0, 0, 0, 0.715), rgba(10, 11, 11, 0.223), rgba(25, 25, 25, 0.071));
 }
+
+
+
 .card-footer{
      bottom: 0;
      padding:0 10px;
