@@ -12,6 +12,9 @@
 
 body {
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -103,7 +106,7 @@ header .container {
 
 .hero {
   height: 70vh;
-  background: url("../../assets/imgs/photos/hero.jpeg") top/cover;
+  background: url("../../assets/imgs/categories/city/large/city-status-01.jpg") top/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,6 +263,7 @@ h1 {
   text-align: center;
   font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
   font-weight: 700;
+  margin-bottom: 1em;
 }
 @media screen and (max-width: 480px) {
   .main-section h2 {
@@ -296,6 +300,7 @@ h1 {
   position: relative;
   break-inside: avoid;
   margin-bottom: 0.625em;
+  max-height: 920px;
 }
 
 .card-photo img {
@@ -426,6 +431,116 @@ button {
 
 .handle-open-navbar {
   display: flex;
+}
+
+.img-profile {
+  max-width: 582px;
+}
+
+#profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-infos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-infos .left li {
+  padding-bottom: 1.5em;
+  color: rgb(170, 165, 165);
+}
+
+.contact-infos .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.container > h1 {
+  width: 100% !important;
+  margin-bottom: 60px;
+  position: relative;
+  font-weight: 700;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+}
+@media screen and (min-width: 768px) {
+  .container > h1 {
+    right: -400px;
+  }
+}
+
+.contact-infos .right h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+.contact-infos .right p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+}
+
+footer {
+  border: 1px solid gray;
+  margin-top: 60px;
+  padding-bottom: 30px;
+}
+footer .container {
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+footer .container h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+footer .container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+footer form {
+  display: flex;
+  flex-direction: column;
+  max-width: 385px;
+  width: 385px;
+  gap: 1em;
+}
+footer form input, footer form button {
+  height: 38px;
+  border-radius: 5px;
+}
+footer form input {
+  padding: 0 10px;
+  border: 1px solid gray;
+}
+footer form input:focus {
+  outline-color: gray;
+}
+footer form button {
+  background: black;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+footer form button:hover {
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=style.css.map */
