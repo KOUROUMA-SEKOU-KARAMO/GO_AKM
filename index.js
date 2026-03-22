@@ -1,5 +1,7 @@
+import { data } from "./js/data.js"
 const containerNavbarBtn=document.querySelector(".container-btns")  
 const navMenuMobile=document.querySelector(".nav-menu-mobile")  
+
 const objectBtns={
     openBtnNavbar:document.querySelector('.open-navbars'),
     closeBtnNavbar:document.querySelector('.close-navbar')
@@ -19,3 +21,5 @@ containerNavbarBtn.addEventListener('click',function(e){
           console.log(navMenuMobile)
   }
 })
+
+console.log(data)

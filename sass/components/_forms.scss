@@ -1,0 +1,42 @@
+
+    .form-contact,.form-sign-up,.form-sign-in{ 
+         display: flex;
+         flex-direction: column;
+         max-width: 385px;
+          width: 385px;
+          gap: 1em;
+
+         input,button{
+              height:38px;
+             border-radius: 5px;
+         }
+          input{
+           
+             padding: 0 10px; 
+             border: 1px solid gray;
+            &:focus{
+                 outline-color: gray;
+            }
+          }
+          button{
+             background: black;
+             color: white;
+             font-size: 1.2rem;
+             cursor:pointer;
+
+             &:hover{
+              opacity: .7;
+             }
+          }
+
+
+
+    }
+
+
+    .form-contact{
+      @media screen and (max-width:1000px) {
+            width: 100%;
+            padding:0 10px;
+          }
+    }

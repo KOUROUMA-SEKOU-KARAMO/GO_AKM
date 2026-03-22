@@ -1,0 +1,45 @@
+#container-sign-up{ 
+   display: flex;
+   justify-content: space-around; 
+    @media screen and (max-width:1000px) {
+       justify-content: center; 
+       margin-top: 50px;
+     }
+   @media screen and (max-width:480px) {
+      padding: 7px;
+     }
+
+   .img-profile{
+     max-width: 682px; 
+      @media screen and (max-width:1000px) {
+         display: none;
+     }
+}
+
+   a{
+        text-align: center;
+        // color: green;
+          @media screen and (max-width:380px) {
+           font-size: 12px;
+     }
+     };
+
+ #form-sign-up{
+    gap:.5em;
+
+    label{
+        margin-top: 1.5em;
+    }
+    input{
+         box-shadow: 1px 1px 1px rgb(203, 201, 201);
+         border:solid 1px rgb(213, 212, 212);
+    }
+
+ 
+
+ }
+
+ button{
+     margin-top: 30px;
+ }
+}

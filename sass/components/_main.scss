@@ -1,7 +1,10 @@
 
+.header-index{
+      box-shadow:none;
+}
 .main-section{  
-    margin-top: auto;
-    padding-top: 50px; 
+    // margin-top: auto; 
+    // min-height: 60vh;
     @media screen and (max-width: 480px) {
         padding-top: 1em;
     }
@@ -23,6 +26,7 @@
     column-count: 1; 
     column-gap: 0.625em;
     padding-inline: 1em;
+ 
        @media (min-width: 600px) {
         column-count: 1;
     }

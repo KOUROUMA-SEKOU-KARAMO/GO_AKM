@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 a {
@@ -29,10 +30,11 @@ li {
 
 header {
   border: none;
+  box-shadow: 1px 1px 1px rgba(187, 185, 185, 0.523);
 }
 
-header .container {
-  max-width: 1800px;
+header .container, #container-sign-up, #container-sign-in {
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -53,7 +55,7 @@ header .container {
 }
 
 .logo {
-  font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
   font-weight: 700;
 }
 
@@ -98,6 +100,7 @@ header .container {
 
 .nav-menu a {
   transition: 0.3s ease;
+  font-size: 1rem;
 }
 
 .nav-menu a:hover {
@@ -222,7 +225,7 @@ h1 {
 }
 
 .filter span {
-  font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.5rem);
   font-weight: 500;
 }
 
@@ -249,10 +252,10 @@ h1 {
   display: block;
 }
 
-.main-section {
-  margin-top: auto;
-  padding-top: 50px;
+.header-index {
+  box-shadow: none;
 }
+
 @media screen and (max-width: 480px) {
   .main-section {
     padding-top: 1em;
@@ -436,6 +439,11 @@ button {
 .img-profile {
   max-width: 582px;
 }
+@media screen and (max-width: 768px) {
+  .img-profile {
+    width: 100%;
+  }
+}
 
 #profile {
   width: 100%;
@@ -455,6 +463,12 @@ button {
 .contact-infos {
   display: flex;
   justify-content: space-around;
+}
+@media screen and (max-width: 768px) {
+  .contact-infos {
+    flex-direction: column;
+    padding-inline: 10px;
+  }
 }
 
 .contact-infos .left li {
@@ -486,6 +500,7 @@ button {
   font-size: 1.4rem;
   margin-bottom: 0;
   text-transform: capitalize;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.4rem);
 }
 
 .contact-infos .right p {
@@ -496,7 +511,7 @@ button {
 }
 
 footer {
-  border: 1px solid gray;
+  border-top: 1px solid rgba(193, 190, 190, 0.521);
   margin-top: 60px;
   padding-bottom: 30px;
 }
@@ -504,6 +519,14 @@ footer .container {
   flex-direction: row;
   justify-content: space-around;
   margin-top: 50px;
+}
+@media screen and (max-width: 1000px) {
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
 }
 footer .container h3 {
   margin-bottom: 20px;
@@ -515,32 +538,157 @@ footer .container ul {
   flex-direction: column;
   gap: 1.2em;
 }
-footer form {
+
+.form-contact, .form-sign-up, .form-sign-in {
   display: flex;
   flex-direction: column;
   max-width: 385px;
   width: 385px;
   gap: 1em;
 }
-footer form input, footer form button {
+.form-contact input, .form-contact button, .form-sign-up input, .form-sign-up button, .form-sign-in input, .form-sign-in button {
   height: 38px;
   border-radius: 5px;
 }
-footer form input {
+.form-contact input, .form-sign-up input, .form-sign-in input {
   padding: 0 10px;
   border: 1px solid gray;
 }
-footer form input:focus {
+.form-contact input:focus, .form-sign-up input:focus, .form-sign-in input:focus {
   outline-color: gray;
 }
-footer form button {
+.form-contact button, .form-sign-up button, .form-sign-in button {
   background: black;
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
 }
-footer form button:hover {
+.form-contact button:hover, .form-sign-up button:hover, .form-sign-in button:hover {
   opacity: 0.7;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-contact {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+#container-sign-up {
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1000px) {
+  #container-sign-up {
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container-sign-up {
+    padding: 7px;
+  }
+}
+#container-sign-up .img-profile {
+  max-width: 682px;
+}
+@media screen and (max-width: 1000px) {
+  #container-sign-up .img-profile {
+    display: none;
+  }
+}
+#container-sign-up a {
+  text-align: center;
+}
+@media screen and (max-width: 380px) {
+  #container-sign-up a {
+    font-size: 12px;
+  }
+}
+#container-sign-up #form-sign-up {
+  gap: 0.5em;
+}
+#container-sign-up #form-sign-up label {
+  margin-top: 1.5em;
+}
+#container-sign-up #form-sign-up input {
+  box-shadow: 1px 1px 1px rgb(203, 201, 201);
+  border: solid 1px rgb(213, 212, 212);
+}
+#container-sign-up button {
+  margin-top: 30px;
+}
+
+#container-sign-in {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+@media screen and (max-width: 1000px) {
+  #container-sign-in {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container-sign-in {
+    padding: 7px;
+  }
+}
+#container-sign-in .img-profile {
+  max-width: 682px;
+}
+@media screen and (max-width: 1000px) {
+  #container-sign-in .img-profile {
+    display: none;
+  }
+}
+#container-sign-in #form-sign-in {
+  gap: 0.5em;
+}
+#container-sign-in #form-sign-in label {
+  margin-top: 1.5em;
+}
+#container-sign-in #form-sign-in input {
+  box-shadow: 1px 1px 1px rgb(203, 201, 201);
+  border: solid 1px rgb(213, 212, 212);
+}
+#container-sign-in #form-sign-in a {
+  text-align: center;
+  font-weight: 500;
+}
+@media screen and (max-width: 380px) {
+  #container-sign-in #form-sign-in a {
+    font-size: 12px;
+  }
+}
+#container-sign-in button {
+  margin-top: 30px;
+}
+#container-sign-in .control-account {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#container-sign-in .control-account label {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  align-self: flex-start;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  #container-sign-in .control-account label {
+    gap: none;
+  }
+}
+#container-sign-in .control-account input {
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: none !important;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

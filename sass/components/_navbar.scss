@@ -6,14 +6,14 @@
     margin: auto; 
     height: 71px;
     padding-inline:1.5em;  
-    position: relative;  
+    position: relative;  ;
     @media screen and (max-width:480px) {
        padding-inline:1em;  
    }
 }
 
  .logo{
-   font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+   font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
    font-weight: 700;
 
  }
@@ -60,6 +60,7 @@
  
  .nav-menu a{ 
   transition: .3s ease;
+  font-size: 1rem;
  }
  .nav-menu a:hover{  
    opacity: .4;

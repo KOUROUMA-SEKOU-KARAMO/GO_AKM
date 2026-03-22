@@ -1,7 +1,11 @@
 
 .img-profile{
      max-width: 582px; 
+       @media screen and (max-width:768px) {
+          width: 100%;
+      }
 }
+
 
 #profile {
      width: 100%;
@@ -9,6 +13,8 @@
      object-fit: cover;
      object-position: center; 
      border-radius: 5px;
+
+     
 
 }
 
@@ -22,6 +28,10 @@
 .contact-infos{
      display: flex;
      justify-content: space-around; 
+     @media screen and (max-width:768px) {
+           flex-direction: column;
+     padding-inline:10px;
+      }
 }
 
 .contact-infos .left li{
@@ -57,6 +67,7 @@
     font-size: 1.4rem;
     margin-bottom: 0;
     text-transform: capitalize;
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 1.4rem);
 }
 
 

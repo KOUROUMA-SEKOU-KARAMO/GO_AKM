@@ -10,6 +10,7 @@ body{
      min-height: 100vh;
      display: flex;
      flex-direction: column;
+     justify-content: space-between;
      
 }
 
@@ -27,11 +28,14 @@ li{
 
 header{  
       border:none; 
+
+//     border-bottom: 1px solid rgba(199, 194, 194, 0.753)
+     box-shadow: 1px 1px 1px rgba(187, 185, 185, 0.523);
      
 }
 
-header .container{ 
-      max-width: 1800px;
+header .container, #container-sign-up,#container-sign-in{ 
+      max-width: 1200px;
       margin: auto;  
 
 }
