@@ -1,0 +1,13 @@
+ [{ 
+       
+            "menuBars": "/src/assets/icons/menu_bars.png",
+            "heart": "/src/assets/icons/heart.png",
+            "mail": "/src/assets/icons/mail.png",
+            "download": "/src/assets/icons/download.png",
+            "search": "/src/assets/icons/search.png",
+            "closeBars": "/src/assets/icons/close-navbar.png"
+       
+      
+}
+]
+ 

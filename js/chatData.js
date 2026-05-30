@@ -1,6 +1,6 @@
     const galleryApp = {
       data: {
-        categories: ["all", "people", "nature", "city", "travel", "fashion"],
+        categories: ["people", "nature", "city", "travel", "fashion"],
         images: [
           {
             id: 1,

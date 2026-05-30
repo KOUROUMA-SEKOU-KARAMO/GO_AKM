@@ -1,0 +1,39 @@
+ 
+.header-index{
+      box-shadow:none;
+}
+.main-section{  
+    @media screen and (max-width: 480px) {
+        padding-top: 1em;
+    }
+}
+.main-section h2{ 
+     text-align: center;
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
+     font-weight: 700;
+     margin-bottom: 1em;
+
+     @media screen and (max-width: 480px) {
+        margin-bottom: 2em;
+       padding-top: 0;
+    }
+}
+
+
+.gallery-grip{
+    column-count: 1; 
+    column-gap: 0.625em;
+    padding-inline: 1em;
+ 
+       @media (min-width: 600px) {
+        column-count: 1;
+    }
+
+    @media (min-width: 900px) {
+        column-count: 2;
+    }
+
+    @media (min-width: 1200px) {
+        column-count: 3;
+    }
+}

@@ -1,0 +1,47 @@
+.navbar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    margin: auto; 
+    height: 71px;
+    padding-inline:1.5em;  
+    position: relative;  
+    display: none;
+    @media screen and (max-width:480px) {
+       padding-inline:1em;  
+   }
+}
+
+  
+
+ .nav-menu{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   font-weight: 500;
+   font-size: 1.2rem; 
+   border:none;
+     @media screen and (max-width: 768px) {  
+      display: none; 
+   }
+ } 
+
+
+ header .container{
+    position: relative;   
+    
+ }
+
+
+
+ 
+ .nav-menu a{ 
+  transition: .3s ease;
+  font-size: 1rem;
+ }
+ .nav-menu a:hover{  
+   opacity: .4;
+ }
+

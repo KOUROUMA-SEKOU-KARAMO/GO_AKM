@@ -1,0 +1,43 @@
+*,::after,::before{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family:sans-serif;
+}
+
+body{
+     overflow-x: hidden;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     
+}
+
+
+
+a{
+     text-decoration: none;
+     text-transform: capitalize;
+     color: black;
+}
+
+
+li{
+     list-style-type: none;
+}
+
+
+
+header{  
+      border:none;  
+     box-shadow: 1px 1px 1px rgba(187, 185, 185, 0.523); 
+      background-color: #171f2bc7;
+     
+}
+
+header .container, #container-sign-up,#container-sign-in{ 
+      max-width: 1200px;
+      margin: auto;  
+
+} 

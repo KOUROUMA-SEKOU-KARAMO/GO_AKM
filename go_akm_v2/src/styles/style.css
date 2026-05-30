@@ -1,0 +1,695 @@
+@charset "UTF-8";
+:root {
+  --big-title:#fff;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  border: none;
+  box-shadow: 1px 1px 1px rgba(187, 185, 185, 0.523);
+}
+
+header .container, #container-sign-up, #container-sign-in {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  height: 71px;
+  padding-inline: 1.5em;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .navbar-header {
+    padding-inline: 1em;
+  }
+}
+
+.logo {
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
+  font-weight: 700;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+header .container {
+  position: relative;
+}
+
+.nav-menu-mobile {
+  display: none;
+  transition: 1s ease;
+}
+@media screen and (max-width: 768px) {
+  .nav-menu-mobile {
+    font-size: 1.5rem;
+    flex-direction: column;
+    display: none;
+    justify-content: flex-start;
+    padding-top: 0;
+    background-color: white;
+    width: 100%;
+    border-top: none;
+    overflow: hidden;
+    padding-bottom: 30px;
+    transition: 1s ease;
+  }
+}
+
+.nav-menu a {
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.nav-menu a:hover {
+  opacity: 0.4;
+}
+
+.hero {
+  height: 70vh;
+  background: url("../assets/imgs/categories/city/large/city-status-01.jpg") top/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--big-title);
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    height: 40vh;
+  }
+}
+
+.container-hero {
+  background-color: rgba(9, 9, 9, 0.635);
+  background: teal;
+  padding: 30px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+  .container-hero {
+    height: auto;
+    position: relative;
+  }
+}
+
+h1 {
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: 30px;
+  max-width: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1em;
+  text-align: center;
+}
+
+.break-point {
+  display: block;
+}
+
+.search-form {
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto;
+}
+@media screen and (max-width: 480px) {
+  .search-form {
+    width: 90vw;
+    margin-inline: 15px;
+  }
+}
+
+.group-input {
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: white;
+  padding-inline: 5px;
+}
+@media screen and (max-width: 480px) {
+  .group-input {
+    max-width: 250px;
+    margin: auto;
+  }
+}
+
+.group-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding-left: 5px;
+}
+
+.group-input input::placeholder {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.group-input input:focus {
+  outline: none;
+}
+
+.group-input button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 2rem;
+  border: none;
+  background-color: none;
+  cursor: pointer;
+}
+
+.group-input button img {
+  width: 100%;
+  height: 100%;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.filter span {
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.5rem);
+  font-weight: 500;
+}
+
+.filter a {
+  font-size: 1.1rem;
+  color: rgb(184, 180, 180);
+  position: relative;
+}
+.filter a::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  height: 1px;
+  left: 0;
+  bottom: -2px;
+  transition: 0.3s ease;
+  display: none;
+}
+.filter a:hover {
+  color: white;
+}
+.filter a:hover::after {
+  right: 0;
+  display: block;
+}
+
+.header-index {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 480px) {
+  .main-section {
+    padding-top: 1em;
+  }
+}
+
+.main-section h2 {
+  text-align: center;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 480px) {
+  .main-section h2 {
+    margin-bottom: 2em;
+    padding-top: 0;
+  }
+}
+
+.gallery-grip {
+  column-count: 1;
+  column-gap: 0.625em;
+  padding-inline: 1em;
+}
+@media (min-width: 600px) {
+  .gallery-grip {
+    column-count: 1;
+  }
+}
+@media (min-width: 900px) {
+  .gallery-grip {
+    column-count: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery-grip {
+    column-count: 3;
+  }
+}
+
+.card-photo {
+  height: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 0.625em;
+  max-height: 920px;
+}
+
+.card-photo img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.card-header, .card-footer {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  transition: 1s ease;
+}
+
+.card-photo:hover .card-header, .card-photo:hover .card-footer {
+  display: flex;
+}
+
+.card-header {
+  top: 0;
+  padding: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.715), rgba(10, 11, 11, 0.223), rgba(25, 25, 25, 0.071));
+}
+
+.card-footer {
+  bottom: 0;
+  padding: 0 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.715), rgba(10, 11, 11, 0.223), rgba(25, 25, 25, 0.071));
+}
+
+.profil {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-transform: capitalize;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card-btn, .open-navbars {
+  border-radius: 5px;
+}
+
+.card-btn {
+  width: 30px ;
+  height: 30px ;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-left: auto;
+  border: none;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-photo .logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.open-navbars, .close-navbar {
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+@media screen and (max-width: 480px) {
+  .open-navbars, .close-navbar {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.handle-navbar {
+  display: flex;
+}
+
+.handle-close-navbar {
+  display: none;
+}
+
+.container-btns {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  right: 1.625em;
+  top: 0.8em;
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .container-btns {
+    display: flex;
+    right: 5px;
+  }
+  .container-btns .close-navbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container-btns {
+    right: 7px;
+    top: 1.2em;
+  }
+}
+
+.handle-close-navbar {
+  display: none;
+}
+
+.handle-open-navbar {
+  display: flex;
+}
+
+.img-profile {
+  max-width: 582px;
+}
+@media screen and (max-width: 768px) {
+  .img-profile {
+    width: 100%;
+  }
+}
+
+#profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-infos {
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 768px) {
+  .contact-infos {
+    flex-direction: column;
+    padding-inline: 10px;
+  }
+}
+
+.contact-infos .left li {
+  padding-bottom: 1.5em;
+  color: rgb(170, 165, 165);
+}
+
+.contact-infos .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.container > h1 {
+  width: 100% !important;
+  margin-bottom: 60px;
+  position: relative;
+  font-weight: 700;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+}
+@media screen and (min-width: 768px) {
+  .container > h1 {
+    right: -400px;
+  }
+}
+
+.contact-infos .right h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.4rem);
+}
+
+.contact-infos .right p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+}
+
+footer {
+  border-top: 1px solid rgba(193, 190, 190, 0.521);
+  margin-top: 60px;
+  padding-bottom: 30px;
+}
+footer .container {
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+@media screen and (max-width: 1000px) {
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+}
+footer .container h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+footer .container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.form-contact, .form-sign-up, .form-sign-in {
+  display: flex;
+  flex-direction: column;
+  max-width: 385px;
+  width: 385px;
+  gap: 1em;
+}
+.form-contact input, .form-contact button, .form-sign-up input, .form-sign-up button, .form-sign-in input, .form-sign-in button {
+  height: 38px;
+  border-radius: 5px;
+}
+.form-contact input, .form-sign-up input, .form-sign-in input {
+  padding: 0 10px;
+  border: 1px solid gray;
+}
+.form-contact input:focus, .form-sign-up input:focus, .form-sign-in input:focus {
+  outline-color: gray;
+}
+.form-contact button, .form-sign-up button, .form-sign-in button {
+  background: black;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.form-contact button:hover, .form-sign-up button:hover, .form-sign-in button:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-contact {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+#container-sign-up {
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1000px) {
+  #container-sign-up {
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container-sign-up {
+    padding: 7px;
+  }
+}
+#container-sign-up .img-profile {
+  max-width: 682px;
+}
+@media screen and (max-width: 1000px) {
+  #container-sign-up .img-profile {
+    display: none;
+  }
+}
+#container-sign-up a {
+  text-align: center;
+}
+@media screen and (max-width: 380px) {
+  #container-sign-up a {
+    font-size: 12px;
+  }
+}
+#container-sign-up #form-sign-up {
+  gap: 0.5em;
+}
+#container-sign-up #form-sign-up label {
+  margin-top: 1.5em;
+}
+#container-sign-up #form-sign-up input {
+  box-shadow: 1px 1px 1px rgb(203, 201, 201);
+  border: solid 1px rgb(213, 212, 212);
+}
+#container-sign-up button {
+  margin-top: 30px;
+}
+
+#container-sign-in {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+@media screen and (max-width: 1000px) {
+  #container-sign-in {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container-sign-in {
+    padding: 7px;
+  }
+}
+#container-sign-in .img-profile {
+  max-width: 682px;
+}
+@media screen and (max-width: 1000px) {
+  #container-sign-in .img-profile {
+    display: none;
+  }
+}
+#container-sign-in #form-sign-in {
+  gap: 0.5em;
+}
+#container-sign-in #form-sign-in label {
+  margin-top: 1.5em;
+}
+#container-sign-in #form-sign-in input {
+  box-shadow: 1px 1px 1px rgb(203, 201, 201);
+  border: solid 1px rgb(213, 212, 212);
+}
+#container-sign-in #form-sign-in a {
+  text-align: center;
+  font-weight: 500;
+}
+@media screen and (max-width: 380px) {
+  #container-sign-in #form-sign-in a {
+    font-size: 12px;
+  }
+}
+#container-sign-in button {
+  margin-top: 30px;
+}
+#container-sign-in .control-account {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#container-sign-in .control-account label {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  align-self: flex-start;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  #container-sign-in .control-account label {
+    gap: none;
+  }
+}
+#container-sign-in .control-account input {
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

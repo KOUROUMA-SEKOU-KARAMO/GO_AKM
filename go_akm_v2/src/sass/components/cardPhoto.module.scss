@@ -1,0 +1,73 @@
+.cardPhoto{
+    height: auto;  
+    border-radius:3px;
+    overflow:hidden;
+    position: relative;  
+    break-inside: avoid; 
+    margin-bottom:  0.625em;
+    max-height: 920px;  
+}
+
+ 
+
+.cardPhoto img{ 
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;  
+    z-index: 1;  
+}
+
+
+.cardHeader,.cardFooter{
+     height: 60px; 
+     width: 100%;
+     position:absolute;
+     z-index: 2; 
+     display: none;
+     align-items: center;
+     justify-content: space-between;
+     transition: 1s ease; 
+     
+
+}
+
+.cardPhoto{
+
+     &:hover{ 
+        .cardHeader,.cardFooter{ 
+            display: flex;
+        }
+    }
+}
+.cardHeader{
+     top: 0;
+     padding: 10px;
+     background:linear-gradient(rgba(0, 0, 0, 0.715), rgba(10, 11, 11, 0.223), rgba(25, 25, 25, 0.071));
+}
+
+
+
+.cardFooter{
+     bottom: 0;
+     padding:0 10px;
+    background:linear-gradient(rgba(0, 0, 0, 0.715), rgba(10, 11, 11, 0.223), rgba(25, 25, 25, 0.071));
+    
+}
+
+.profil{
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     color: white;
+     text-transform: capitalize; 
+     
+} 
+
+.cardPhotoLogo{
+     width: 30px;
+     height: 30px;
+     border-radius: 30px;
+     background-color: rgba(255, 255, 255, 0.321);
+}
